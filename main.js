@@ -6,13 +6,11 @@ function dropdown() {
 
     if (element.classList.contains("show"))
     {
-      mPressed = true;
       life=true;
       boxopen = false;
     }
     else
     {
-      mPressed = false;
       life=false;
       boxopen = true;
     }
@@ -32,13 +30,11 @@ function dropdown1() {
 
     if (element.classList.contains("show"))
     {
-      mPressed = true;
       life=true;
       boxopen = false;
     }
     else
     {
-      mPressed = false;
       life=false;
       boxopen = true;
     }
@@ -58,13 +54,11 @@ function dropdown2() {
 
     if (element.classList.contains("show"))
     {
-      mPressed = true;
       life=true;
       boxopen = false;
     }
     else
     {
-      mPressed = false;
       life=false;
       boxopen = true;
     }
@@ -148,6 +142,6 @@ function drawL() {
 
 function refresh() {
   particles=[];
-  c1 = document.getElementById("color1").value.match(/.{1,2}/g);
-  background(parseInt(c1[0], 16), parseInt(c1[1], 16), parseInt(c1[2], 16));
+  backgroundColor = document.getElementById("color1").value.match(/.{1,2}/g);
+  background(parseInt(backgroundColor[0], 16), parseInt(backgroundColor[1], 16), parseInt(backgroundColor[2], 16));
 }

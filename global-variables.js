@@ -1,0 +1,24 @@
+let particles = [];
+
+let bg;
+let life;
+let sliderSize;
+let sliderLength;
+let sliderSpread;
+let sliderAlpha;
+let sliderMouse;
+let sliderFrame;
+let hard;
+let brushColor;
+let backgroundColor;
+let boxopen;
+let smear;
+let pc;
+let blend;
+let traj;
+let tx;
+let ty;
+let t;
+let p;
+let x;
+let drawLine;

@@ -18,6 +18,7 @@
 
   <script src="pixel.js" charset="utf-8"></script>
   <script src="main.js" charset="utf-8"></script>
+  <script src="global-variables.js" charset="utf-8"></script>
   <script src="sketch.js" charset="utf-8"></script>
 
 
