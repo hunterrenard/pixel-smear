@@ -98,8 +98,10 @@ function smearBrush() {
 
   // If the checkbox is checked, display the output text
   if (checkBox.checked == true){
+    document.getElementById("col").classList.add("disabled");
     smear = true;
   } else {
+    document.getElementById("col").classList.remove("disabled");
     smear = false;
   }
 }
@@ -123,8 +125,12 @@ function trajectory() {
   // If the checkbox is checked, display the output text
   if (checkBox.checked == true){
     traj = true;
+    document.getElementById("traj").classList.remove("disabled");
+    document.getElementById("mouseRange").disabled = false;
   } else {
     traj = false;
+    document.getElementById("traj").classList.add("disabled");
+    document.getElementById("mouseRange").disabled = true;
   }
 }
 

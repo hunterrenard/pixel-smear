@@ -34,7 +34,7 @@ header .dropbtn:hover, header .save:hover, header .info:hover, header .file:hove
   display: none;
   position: absolute;
     background-color: #3c3744;
-    min-width: 160px;
+    min-width: 180px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
@@ -183,6 +183,11 @@ input[type=range]::-ms-track {
   border-color: transparent;
   color: transparent;
 }
+
+.disabled{
+    display: none;
+}
+
 input[type=range]::-ms-fill-lower {
   background: #000080;
   border: 0px solid #010101;

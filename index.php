@@ -33,19 +33,15 @@
   </div>
 
   <div id="myDropdown2" class="dd dropdown-content dc3">
-    <div class="slidecontainer">
-      <p>Brush:</p>
-      <input class="jscolor" id="color" value="ffffff">
-    </div>
-    <div class="slidecontainer">
-      <p>Background:</p>
-      <input class="jscolor" id="color1" value="000000">
-    </div>
     <p>Smear:</p>
     <label class="switch">
       <input type="checkbox" id="smearbox" onclick="smearBrush();">
       <span class="slider"></span>
     </label>
+    <div class="slidecontainer" id="col">
+      <p>Brush:</p>
+      <input class="jscolor" id="color" value="ffffff">
+    </div>
     <p>Blend Colors:</p>
     <label class="switch">
       <input type="checkbox" id="blendbox" onclick="blendColors();" checked>
@@ -56,6 +52,10 @@
       <input type="checkbox" id="drawbox" onclick="drawL();">
       <span class="slider"></span>
     </label>
+    <div class="slidecontainer">
+      <p>Background:</p>
+      <input class="jscolor" id="color1" value="000000">
+    </div>
   </div>
 
   <div id="myDropdown1" class="dd dropdown-content dc2">
@@ -88,15 +88,15 @@
       <p>Pixel Alpha:</p>
       <input type="range" min="1" max="255" value="255" class="slider" id="alphaRange">
     </div>
-    <div class="slidecontainer">
-      <p>Trajectory Weight:</p>
-      <input type="range" min="1" max="200" value="150" class="slider" id="mouseRange">
-    </div>
     <p>Trajectory:</p>
     <label class="switch">
       <input type="checkbox" id="trajectorybox" onclick="trajectory();" checked>
       <span class="slider"></span>
     </label>
+    <div class="slidecontainer" id="traj">
+      <p>Trajectory Weight:</p>
+      <input type="range" min="1" max="200" value="150" class="slider" id="mouseRange">
+    </div>
     <p>Hard Stop:</p>
     <label class="switch">
       <input type="checkbox" id="hardbox" onclick="hardStop();">
