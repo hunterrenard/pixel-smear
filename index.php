@@ -49,10 +49,10 @@
   </div>
 
   <div id="myDropdown1" class="dd dropdown-content dc2">
-    <p>Created by <a>Hunter Renard</a>.</p>
+    <p>Created by <a target="_blank" href="http://hunterrenard.com/">Hunter Renard</a>.</p>
     <p>Made over a weekend using P5.js.</p>
     <p>This web app is still in pre-alpha. Any tweaks will be based on user interest as well as how much free time I have.</p>
-    <p>Feel free to submit a pull request or fork this project on <a href="">GitHub</a> yourself!</p>
+    <p>Feel free to submit a pull request or fork this project on <a target="blank" href="https://github.com/hunterrenard/pixel-smear">GitHub</a> yourself!</p>
     <p>&copy; 2018 Hunter Renard</p>
   </div>
 
