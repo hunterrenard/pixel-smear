@@ -69,10 +69,6 @@
 
   <div id="myDropdown" class="dd dropdown-content dc1">
     <div class="slidecontainer">
-      <p>Frame Rate:</p>
-      <input type="range" min="0" max="60" value="60" class="slider" id="frameRange">
-    </div>
-    <div class="slidecontainer">
       <p>Pixel Size:</p>
       <input type="range" min="1" max="50" value="8" class="slider" id="sizeRange">
     </div>
@@ -102,6 +98,10 @@
       <input type="checkbox" id="hardbox" onclick="hardStop();">
       <span class="slider"></span>
     </label>
+    <div class="slidecontainer">
+      <p>Frame Rate:</p>
+      <input type="range" min="0" max="60" value="60" class="slider" id="frameRange">
+    </div>
   </div>
 </header>
 </body>
