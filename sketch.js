@@ -21,7 +21,6 @@ let t;
 
 function preload()
 {
-  bg = loadImage("sarah.jpg")
 }
 
 function setup() {
@@ -29,7 +28,6 @@ function setup() {
   c = document.getElementById("color").value.match(/.{1,2}/g);
 	c1 = document.getElementById("color1").value.match(/.{1,2}/g);
   background(parseInt(c1[0], 16), parseInt(c1[1], 16), parseInt(c1[2], 16));
-  //image(bg, 0, 0);
   hard = false;
   mPressed = false;
   boxopen = false;
@@ -62,7 +60,7 @@ function draw() {
       pc = color(get(mouseX, mouseY),x)
     else
       pc = color(parseInt(c[0], 16), parseInt(c[1], 16), parseInt(c[2], 16), x);
-    let p = new Particle(mouseX, mouseY, pc, sliderSize.value, sliderLength.value, sliderSpread.value, tx, ty, blend);
+    let p = new Particle(mouseX, mouseY, pc, tx, ty, sliderSize.value, sliderLength.value, sliderSpread.value, blend);
 
     particles.push(p);
     }
@@ -72,7 +70,7 @@ function draw() {
       particles[i].show();
 
 
-      if(particles[i].finished())
+      if(particles[i].isFinished())
       {
         particles.splice(i,1);
       }

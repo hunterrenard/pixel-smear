@@ -1,32 +1,127 @@
 class Particle {
-  constructor(x, y, color, size, length, spread, travelx, travely, blend) {
+  constructor(x = 0, y = 0, color = (255,255,255,255), trajectoryX = 8, trajectoryY = 8, size = 8, length = 8, spread = 8, blend = true) {
     this.count = 0;
-
     this.x = x;
     this.y = y;
-
-    this.px = x;
-    this.py = y;
-
-    this.tx = travelx
-    this.ty = travely;
-
-    this.r = size;
+    this.previousX = x;
+    this.previousY = y;
+    this.trajectoryX = trajectoryX;
+    this.trajectoryY = trajectoryY;
+    this.size = size;
     this.color = color;
     this.blend = blend;
-
     this.spread = spread;
     this.length = length;
   }
 
+  getX() {
+    return(this.x);
+  }
+
+  getY() {
+    return(this.y);
+  }
+
+  getPreviousX() {
+    return(this.previousX);
+  }
+
+  getPreviousY() {
+    return(this.previousY);
+  }
+
+  getTrajectoryX() {
+    return(this.trajectoryX);
+  }
+
+  getTrajectoryY() {
+    return(this.trajectoryY);
+  }
+
+  getColor() {
+    return(this.color);
+  }
+
+  getSize() {
+    return(this.size);
+  }
+
+  getLength() {
+    return(this.length);
+  }
+
+  getCount() {
+    return(this.count);
+  }
+
+  getSpread() {
+    return(this.spread);
+  }
+
+  getBlend() {
+    return(this.blend);
+  }
+
+  setX(x) {
+    this.x = x;
+  }
+
+  setY(y) {
+    this.y = y;
+  }
+
+  setPreviousX(previousX) {
+    this.previousX = previousX;
+  }
+
+  setPreviousY(previousY) {
+    this.previousY = previousY;
+  }
+
+  setTrajectoryX(trajectoryX) {
+    this.trajectoryX = trajectoryX;
+  }
+
+  setTrajectoryY(trajectoryY) {
+    this.trajectoryY = trajectoryY;
+  }
+
+  setColor(color) {
+    this.color = color;
+  }
+
+  setSize(size) {
+    this.size = size;
+  }
+
+  setLength(length) {
+    this.length = length;
+  }
+
+  setCount(count) {
+    this.count = count;
+  }
+
+  setSpread(spread) {
+    this.spread = spread;
+  }
+
+  setBlend(blend) {
+    this.blend = blend;
+  }
+
+  isFinished() {
+    return(this.count > this.length);
+  }
+
   update() {
-    this.px = this.x;
-    this.py = this.y;
+    this.previousX = this.x;
+    this.previousY = this.y;
 
     let neg = -1 * this.spread;
 
-    this.x += random(neg, this.spread) + this.tx;
-    this.y += random(neg, this.spread) + this.ty;
+    this.x += random(neg, this.spread) + this.trajectoryX;
+    this.y += random(neg, this.spread) + this.trajectoryY;
 
     if(blend){
       if((this.x >= 1 && this.x <= width - 1) && (this.y >= 1 && this.y <= height - 1))
@@ -44,23 +139,7 @@ class Particle {
 
   show() {
     stroke(this.color);
-    strokeWeight(this.r);
-    line(this.x, this.y, this.px, this.py);
-  }
-
-  getX() {
-    return(this.x);
-  }
-
-  getY() {
-    return(this.y);
-  }
-
-  getColor() {
-    return(this.color);
-  }
-
-  finished() {
-    return(this.count > this.length);
+    strokeWeight(this.size);
+    line(this.x, this.y, this.previousX, this.previousY);
   }
 }
