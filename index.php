@@ -75,7 +75,7 @@
     </div>
     <div class="slidecontainer">
       <p>Trajectory Weight:</p>
-      <input type="range" min="1" max="200" value="50" class="slider" id="mouseRange">
+      <input type="range" min="1" max="200" value="150" class="slider" id="mouseRange">
     </div>
     <p>Trajectory:</p>
     <label class="switch">

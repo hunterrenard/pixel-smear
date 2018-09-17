@@ -17,6 +17,7 @@ let blend;
 let traj;
 let tx;
 let ty;
+let t;
 
 function preload()
 {
@@ -45,8 +46,9 @@ function setup() {
 
 function draw() {
   if(traj) {
-    tx = (pmouseX - mouseX) / sliderMouse.value;
-    ty = (pmouseY - mouseY) / sliderMouse.value;
+    t = 201 - sliderMouse.value;
+    tx = (pmouseX - mouseX) / t;
+    ty = (pmouseY - mouseY) / t;
   }
   else {
     tx = 0;
