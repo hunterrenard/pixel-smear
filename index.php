@@ -74,7 +74,7 @@
     </div>
     <div class="slidecontainer">
       <p>Pixel Size:</p>
-      <input type="range" min="0" max="50" value="8" class="slider" id="sizeRange">
+      <input type="range" min="1" max="50" value="8" class="slider" id="sizeRange">
     </div>
     <div class="slidecontainer">
       <p>Pixel Duration:</p>
