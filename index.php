@@ -52,7 +52,7 @@
     <p>Created by <a target="_blank" href="http://hunterrenard.com/">Hunter Renard</a>.</p>
     <p>Made over a weekend using P5.js.</p>
     <p>This web app is still in pre-alpha. Any tweaks will be based on user feedback as well as how much free time I have.</p>
-    <p>Feel free to submit a pull request or fork this project on <a target="blank" href="https://github.com/hunterrenard/pixel-smear">GitHub</a>!</p>
+    <p>Feel free to submit a pull request or fork this project on <a target="blank" href="https://github.com/hunterrenard/pixel-smear">GitHub</a>.</p>
     <p>You love it? You hate it? Any issues? <a href="mailto:hunter@hunterrenard.com">Let me know</a>.</p>
 
     <p>&copy; 2018 Hunter Renard</p>
