@@ -6,6 +6,7 @@ let sliderLength;
 let sliderSpread;
 let sliderAlpha;
 let sliderMouse;
+let sliderFrame;
 let hard;
 let mPressed;
 let c;
@@ -18,6 +19,9 @@ let traj;
 let tx;
 let ty;
 let t;
+let p;
+let x;
+let drawLine;
 
 function preload()
 {
@@ -34,15 +38,18 @@ function setup() {
   smear = false;
   blend = true;
   traj = true;
+  drawLine = false;
 
   sliderSize = document.getElementById("sizeRange");
   sliderLength = document.getElementById("lengthRange");
   sliderSpread = document.getElementById("spreadRange");
   sliderAlpha = document.getElementById("alphaRange");
   sliderMouse = document.getElementById("mouseRange");
+  sliderFrame = document.getElementById("frameRange");
 }
 
 function draw() {
+  frameRate(int(sliderFrame.value));
   if(traj) {
     t = 201 - sliderMouse.value;
     tx = (pmouseX - mouseX) / t;
@@ -55,14 +62,19 @@ function draw() {
 
   if((mouseX >= 1 && mouseX <= width - 1) && (mouseY >= 1 && mouseY <= height - 1) && life) {
     c = document.getElementById("color").value.match(/.{1,2}/g);
-    let x = int(sliderAlpha.value);
+    x = int(sliderAlpha.value);
     if(smear)
       pc = color(get(mouseX, mouseY),x)
     else
       pc = color(parseInt(c[0], 16), parseInt(c[1], 16), parseInt(c[2], 16), x);
-    let p = new Particle(mouseX, mouseY, pc, tx, ty, sliderSize.value, sliderLength.value, sliderSpread.value, blend);
+    p = new Particle(mouseX, mouseY, pc, tx, ty, sliderSize.value, sliderLength.value, sliderSpread.value, blend);
 
     particles.push(p);
+    if(drawLine)  {
+      stroke(color(parseInt(c[0], 16), parseInt(c[1], 16), parseInt(c[2], 16), x), int(sliderAlpha.value));
+      strokeWeight(sliderSize.value);
+      line(mouseX, mouseY, pmouseX, pmouseY);
+    }
     }
 
     for(let i = 0; i < particles.length; i++) {

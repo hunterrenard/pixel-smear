@@ -106,7 +106,7 @@ function smearBrush() {
 
 function blendColors() {
   // Get the checkbox
-  var checkBox = document.getElementById("smearbox");
+  var checkBox = document.getElementById("blendbox");
 
   // If the checkbox is checked, display the output text
   if (checkBox.checked == true){
@@ -125,6 +125,18 @@ function trajectory() {
     traj = true;
   } else {
     traj = false;
+  }
+}
+
+function drawL() {
+  // Get the checkbox
+  var checkBox = document.getElementById("drawbox");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    drawLine = true;
+  } else {
+    drawLine = false;
   }
 }
 

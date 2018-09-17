@@ -33,11 +33,6 @@
   </div>
 
   <div id="myDropdown2" class="dd dropdown-content dc3">
-    <p>Smear:</p>
-    <label class="switch">
-      <input type="checkbox" id="smearbox" onclick="smearBrush();">
-      <span class="slider"></span>
-    </label>
     <div class="slidecontainer">
       <p>Brush:</p>
       <input class="jscolor" id="color" value="ffffff">
@@ -46,6 +41,21 @@
       <p>Background:</p>
       <input class="jscolor" id="color1" value="000000">
     </div>
+    <p>Smear:</p>
+    <label class="switch">
+      <input type="checkbox" id="smearbox" onclick="smearBrush();">
+      <span class="slider"></span>
+    </label>
+    <p>Blend Colors:</p>
+    <label class="switch">
+      <input type="checkbox" id="blendbox" onclick="blendColors();" checked>
+      <span class="slider"></span>
+    </label>
+    <p>Draw Line:</p>
+    <label class="switch">
+      <input type="checkbox" id="drawbox" onclick="drawL();">
+      <span class="slider"></span>
+    </label>
   </div>
 
   <div id="myDropdown1" class="dd dropdown-content dc2">
@@ -58,6 +68,10 @@
   </div>
 
   <div id="myDropdown" class="dd dropdown-content dc1">
+    <div class="slidecontainer">
+      <p>Frame Rate:</p>
+      <input type="range" min="0" max="60" value="60" class="slider" id="frameRange">
+    </div>
     <div class="slidecontainer">
       <p>Pixel Size:</p>
       <input type="range" min="0" max="50" value="8" class="slider" id="sizeRange">
@@ -86,11 +100,6 @@
     <p>Hard Stop:</p>
     <label class="switch">
       <input type="checkbox" id="hardbox" onclick="hardStop();">
-      <span class="slider"></span>
-    </label>
-    <p>Blend Colors:</p>
-    <label class="switch">
-      <input type="checkbox" id="hardbox" onclick="blendColors();" checked>
       <span class="slider"></span>
     </label>
   </div>
