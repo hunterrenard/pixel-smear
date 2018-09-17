@@ -6,12 +6,12 @@ function dropdown() {
 
     if (element.classList.contains("show"))
     {
-      life=true;
+      canDraw=true;
       boxopen = false;
     }
     else
     {
-      life=false;
+      canDraw=false;
       boxopen = true;
     }
 
@@ -30,12 +30,12 @@ function dropdown1() {
 
     if (element.classList.contains("show"))
     {
-      life=true;
+      canDraw=true;
       boxopen = false;
     }
     else
     {
-      life=false;
+      canDraw=false;
       boxopen = true;
     }
 
@@ -54,12 +54,12 @@ function dropdown2() {
 
     if (element.classList.contains("show"))
     {
-      life=true;
+      canDraw=true;
       boxopen = false;
     }
     else
     {
-      life=false;
+      canDraw=false;
       boxopen = true;
     }
 
@@ -80,9 +80,9 @@ function hardStop() {
 
   // If the checkbox is checked, display the output text
   if (checkBox.checked == true){
-    hard = true;
+    stopOnClick = true;
   } else {
-    hard = false;
+    stopOnClick = false;
   }
 }
 

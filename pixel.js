@@ -1,7 +1,7 @@
 class Particle {
 
   // initializes class
-  constructor(x = 0, y = 0, color = (255,255,255,255), width = 0, height = 0, trajectoryX = 8, trajectoryY = 8, size = 8, length = 8, spread = 8, blend = true) {
+  constructor(x = 0, y = 0, color = (255,255,255,255), width = 0, height = 0, trajectoryX = 8, trajectoryY = 8, size = 8, length = 8, spread = 8, count = 0, blend = true) {
     this.x = x;
     this.y = y;
     this.previousX = x;
@@ -15,7 +15,7 @@ class Particle {
     this.length = length;
     this.weight = length;
     this.spread = spread;
-    this.count = 0;
+    this.count = count;
     this.blend = blend;
   }
 
@@ -226,7 +226,7 @@ class Particle {
 
   // returns whether this.x and this.y are within width and height boundaries
   inBounds(w = 0, h = 0, x = 0, y = 0) {
-    return(x > 0 && x < w && y > 0 && y < h);
+    return((x > 0 && x < w) && (y > 0 && y < h));
   }
 
   // returns whether this.x is within width boundaries
@@ -258,18 +258,18 @@ class Particle {
 
   // updates class values
   update() {
-    this.previousX = this.x;
-    this.previousY = this.y;
+    this.setPreviousX(this.getX());
+    this.setPreviousY(this.getY());
 
-    // changes x and y values when in bounds
-    if(this.inBounds(this.getWidth(), this.getHeight(), this.getX(), this.getY())) {
-      this.setX(this.x + this.getRandomSpread() + this.trajectoryX);
-      this.setY(this.y + this.getRandomSpread() + this.trajectoryY);
-    }
+    this.setX(this.x + this.getRandomSpread() + this.trajectoryX);
+    this.setY(this.y + this.getRandomSpread() + this.trajectoryY);
 
-    // blends color of pixel and spot pixel is at
-    if(this.blend) {
-      this.blendColors(this.x,this.y);
+    if(this.getBlend()) {
+      // changes x and y values when in bounds
+      if(this.inBounds(this.getWidth(), this.getHeight(), this.getX(), this.getY())) {
+      // blends color of pixel and spot pixel is at
+        this.blendColors(this.x,this.y);
+      }
     }
 
     this.setCount(this.count + 1);
