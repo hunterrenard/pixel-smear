@@ -33,4 +33,9 @@ io.sockets.on('connection', function(socket) {
     io.to(room).emit('particle', data);
     //console.log(data);
   });
+
+  socket.on('disconnect', function () {
+      console.log(socket.id + " left room " + room);
+      console.log(socket.id + " disconnected");
+  });
 });
