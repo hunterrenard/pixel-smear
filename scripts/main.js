@@ -120,11 +120,26 @@ function trajectory() {
   if (checkBox.checked == true){
     trajectoryBool = true;
     document.getElementById("traj").classList.remove("disabled");
+    document.getElementById("rtraj").classList.remove("disabled");
     document.getElementById("mouseRange").disabled = false;
   } else {
     trajectoryBool = false;
     document.getElementById("traj").classList.add("disabled");
+    document.getElementById("rtraj").classList.add("disabled");
     document.getElementById("mouseRange").disabled = true;
+  }
+}
+
+function reverseTrajectory() {
+  // Get the checkbox
+  var checkBox = document.getElementById("reverseTrajectory");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    trajectoryReverse = true;
+  } else {
+    trajectoryReverse = false;
+
   }
 }
 

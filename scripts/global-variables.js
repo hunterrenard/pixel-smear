@@ -15,6 +15,7 @@ let smear;
 let particleColor;
 let blend;
 let trajectoryBool;
+let trajectoryReverse;
 let trajectoryWeight;
 let trajectoryX;
 let trajectoryY;

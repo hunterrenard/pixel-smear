@@ -11,6 +11,7 @@ function setup() {
   blend = true;
   trajectoryBool = true;
   drawLine = false;
+  trajectoryReverse = false;
 
   // Connect color selectors
   brushColor = document.getElementById("color").value.match(/.{1,2}/g);
@@ -39,8 +40,13 @@ function draw() {
     // if trajectory is turned on
     if(trajectoryBool) {
       trajectoryWeight = 201 - sliderMouse.value;
-      trajectoryX = (pmouseX - mouseX) / trajectoryWeight;
-      trajectoryY = (pmouseY - mouseY) / trajectoryWeight;
+      if(trajectoryReverse){
+        trajectoryX = (pmouseX - mouseX) / trajectoryWeight;
+        trajectoryY = (pmouseY - mouseY) / trajectoryWeight;
+      } else {
+        trajectoryX = -((pmouseX - mouseX) / trajectoryWeight);
+        trajectoryY = -((pmouseY - mouseY) / trajectoryWeight);
+      }
     } else {
       trajectoryX = 0;
       trajectoryY = 0;

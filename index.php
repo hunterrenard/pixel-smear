@@ -36,24 +36,30 @@
 
       <div id="myDropdown2" class="dd dropdown-content dc3">
         <p>Smear:</p>
+        <div class="slidecontainer">
         <label class="switch">
           <input type="checkbox" id="smearbox" onclick="smearBrush();">
           <span class="slider"></span>
         </label>
+      </div>
         <div class="slidecontainer" id="col">
           <p>Brush:</p>
           <input class="jscolor" id="color" value="ffffff">
         </div>
+        <div class="slidecontainer">
         <p>Blend Colors:</p>
         <label class="switch">
           <input type="checkbox" id="blendbox" onclick="blendColors();" checked>
           <span class="slider"></span>
         </label>
+      </div>
+      <div class="slidecontainer">
         <p>Draw Line:</p>
         <label class="switch">
           <input type="checkbox" id="drawbox" onclick="drawL();">
           <span class="slider"></span>
         </label>
+      </div>
         <div class="slidecontainer">
           <p>Background:</p>
           <input class="jscolor" id="color1" value="000000">
@@ -86,20 +92,31 @@
           <p>Pixel Alpha:</p>
           <input type="range" min="1" max="255" value="255" class="slider" id="alphaRange">
         </div>
-        <p>Trajectory:</p>
-        <label class="switch">
-          <input type="checkbox" id="trajectorybox" onclick="trajectory();" checked>
-          <span class="slider"></span>
-        </label>
+        <div class="slidecontainer">
+          <p>Trajectory:</p>
+          <label class="switch">
+            <input type="checkbox" id="trajectorybox" onclick="trajectory();" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div id="rtraj" class="slidecontainer">
+          <p>Reverse Trajectory:</p>
+          <label class="switch">
+            <input type="checkbox" id="reverseTrajectory" onclick="reverseTrajectory();">
+            <span class="slider"></span>
+          </label>
+        </div>
         <div class="slidecontainer" id="traj">
           <p>Trajectory Weight:</p>
           <input type="range" min="1" max="200" value="150" class="slider" id="mouseRange">
         </div>
+        <div class="slidecontainer">
         <p>Hard Stop:</p>
-        <label class="switch">
-          <input type="checkbox" id="hardbox" onclick="hardStop();">
-          <span class="slider"></span>
-        </label>
+          <label class="switch">
+            <input type="checkbox" id="hardbox" onclick="hardStop();">
+            <span class="slider"></span>
+          </label>
+        </div>
         <div class="slidecontainer">
           <p>Frame Rate:</p>
           <input type="range" min="0" max="60" value="60" class="slider" id="frameRange">
