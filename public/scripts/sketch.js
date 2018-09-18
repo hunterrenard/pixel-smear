@@ -4,7 +4,6 @@ function preload()
 }
 
 function newDrawing(data) {
-  console.log(data.particle);
   p = new Particle(data.particle.x,
     data.particle.y,
     color(data.particle.red,data.particle.green,data.particle.blue,data.particle.alpha),
@@ -22,8 +21,6 @@ function newDrawing(data) {
 }
 
 function setup() {
-  socket = io.connect('http://localhost:3000');
-  socket.on('particle', newDrawing);
   // Set Boolean Variables
   stopOnClick = false;
   boxopen = false;
@@ -84,10 +81,11 @@ function draw() {
     }
 
     p = new Particle(mouseX, mouseY, pc, width, height, trajectoryX, trajectoryY, sliderSize.value, sliderLength.value, sliderSpread.value, 0, blend);
-    let data = {
-      particle: p
+
+    if(socketJoined) {
+      let data = {particle: p}
+      socket.emit('particle', data);
     }
-    socket.emit('particle', data);
 
     particles.push(p);
     if(drawLine)  {

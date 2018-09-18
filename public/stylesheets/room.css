@@ -1,0 +1,25 @@
+.online {
+  display: none;
+}
+
+.offline {
+  display: none;
+}
+
+.offline input {
+  font-size: 1.1rem;
+
+  padding: 2px .25rem;
+  margin: 0;
+  border: none !important;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  outline: 0;
+  font-family: monospace;
+  width: 12rem;
+  margin-top: calc(1rem - 2px);
+  margin-bottom: calc(.75rem - 2px);
+}
+
+.offline a {
+  border-bottom : 1px solid #C2F970;
+}

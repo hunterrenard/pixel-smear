@@ -41,10 +41,14 @@ header .dropbtn:hover, header .save:hover, header .info:hover, header .file:hove
 }
 
 .show {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 .active {
+  color: #C2F970 !important;
+}
+
+.superactive {
   color: #C2F970 !important;
 }
 
