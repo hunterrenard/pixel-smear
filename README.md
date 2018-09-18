@@ -1,6 +1,6 @@
 # Pixel Smear
 
-**[Live Version](http://hunterrenard.com/pixel-smear)**
+**[Live Version](http://34.239.105.152:3000/)**
 
 ## How it works
 
