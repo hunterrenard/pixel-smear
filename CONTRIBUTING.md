@@ -15,7 +15,7 @@
 * Keep messages short. Just one or two sentences should be fine to convey meaning.
 * Do not push known errors or unfinished code to the master branch.
 
-### DO NOT PUSH SENSITIVE INFORMATION REGARDING ACCOUNTS OR USER DATA!
+### NEVER PUSH SENSITIVE INFORMATION REGARDING ACCOUNTS OR USER DATA!
 
 ## Contributors
 
