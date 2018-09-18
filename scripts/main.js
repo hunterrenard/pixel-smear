@@ -118,11 +118,11 @@ function trajectory() {
 
   // If the checkbox is checked, display the output text
   if (checkBox.checked == true){
-    traj = true;
+    trajectoryBool = true;
     document.getElementById("traj").classList.remove("disabled");
     document.getElementById("mouseRange").disabled = false;
   } else {
-    traj = false;
+    trajectoryBool = false;
     document.getElementById("traj").classList.add("disabled");
     document.getElementById("mouseRange").disabled = true;
   }
