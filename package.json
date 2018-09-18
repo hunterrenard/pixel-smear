@@ -1,0 +1,23 @@
+{
+  "name": "pixel-smear",
+  "version": "1.0.0",
+  "description": "Takes video / image stream and smears pixels based on sound level / mouse / whatever",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunterrenard/pixel-smear.git"
+  },
+  "author": "Hunter Renard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hunterrenard/pixel-smear/issues"
+  },
+  "homepage": "https://github.com/hunterrenard/pixel-smear#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}
