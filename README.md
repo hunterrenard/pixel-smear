@@ -1,6 +1,6 @@
 # Pixel Smear
 
-**[Temporary Website]()** coming soon.
+**[Live Version](http://hunterrenard.com/pixel-smear)**
 
 ## How it works
 
